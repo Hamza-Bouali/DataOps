@@ -12,8 +12,8 @@ data = input("enter the event: ")
 
 t = 0
 while data!='':
-    msg = {"event_id": t, "value": data}
-    producer.send(topic, value=msg)
+    event = {"event_id": t, "value": data}
+    producer.send(topic, value=event)
     data = input("enter the event: ")
     t+=1
 
